@@ -1,4 +1,5 @@
 import app from "./boot";
+import type { IncomingMessage, ServerResponse } from "http";
 
 function nodeHeadersToFetchHeaders(
   nodeHeaders: Record<string, string | string[] | undefined>
@@ -12,7 +13,10 @@ function nodeHeadersToFetchHeaders(
   return headers;
 }
 
-export default async function handler(req: any, res: any) {
+export default async function handler(
+  req: IncomingMessage,
+  res: ServerResponse
+) {
   try {
     const protocol = req.headers["x-forwarded-proto"] || "https";
     const host = req.headers.host || "localhost";
@@ -42,7 +46,7 @@ export default async function handler(req: any, res: any) {
     response.headers.forEach((v, k) => res.setHeader(k, v));
     const buf = Buffer.from(await response.arrayBuffer());
     res.end(buf);
-  } catch (err: any) {
+  } catch (err) {
     console.error("API wrapper error:", err);
     res.statusCode = 500;
     res.end("Internal Server Error");

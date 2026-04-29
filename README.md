@@ -29,7 +29,6 @@ Notes
   - `VERCEL_PROJECT_ID` — the Vercel project ID for this repository.
 - You can obtain `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` from the Vercel dashboard for your project, or by using the Vercel CLI.
 
-
 - The server-side Hono app is served via `api/[[...all]].ts` for Vercel compatibility.
 - If you need to bundle the server locally, run `npm run build:server` which uses `esbuild` to produce `dist/boot.js`.
 

@@ -25,14 +25,20 @@ export async function createCommission(data: {
   visualReferences?: string;
   description?: string;
 }) {
-  const [{ id }] = await getDb().insert(commissions).values(data).$returningId();
+  const [{ id }] = await getDb()
+    .insert(commissions)
+    .values(data)
+    .$returningId();
   return findCommissionById(id);
 }
 
-export async function updateCommissionStatus(id: number, status: string) {
+export async function updateCommissionStatus(
+  id: number,
+  status: (typeof commissions.$inferInsert)["status"]
+) {
   await getDb()
     .update(commissions)
-    .set({ status: status as any, updatedAt: new Date() })
+    .set({ status, updatedAt: new Date() })
     .where(eq(commissions.id, id));
   return findCommissionById(id);
 }
@@ -60,11 +66,17 @@ export async function createDraft(data: {
   visualReferences?: string;
   description?: string;
 }) {
-  const [{ id }] = await getDb().insert(commissionDrafts).values(data).$returningId();
+  const [{ id }] = await getDb()
+    .insert(commissionDrafts)
+    .values(data)
+    .$returningId();
   return findDraftById(id);
 }
 
-export async function updateDraft(id: number, data: Partial<typeof commissionDrafts.$inferInsert>) {
+export async function updateDraft(
+  id: number,
+  data: Partial<typeof commissionDrafts.$inferInsert>
+) {
   await getDb()
     .update(commissionDrafts)
     .set({ ...data, updatedAt: new Date() })
