@@ -20,6 +20,16 @@ npm run preview
 
 Notes
 
+## CI / Auto Deploy
+
+- This repository includes a GitHub Actions workflow at `.github/workflows/vercel-deploy.yml` which builds and deploys to Vercel on pushes to `main`.
+- Before the workflow can deploy, set the following repository secrets in GitHub (Repository -> Settings -> Secrets):
+  - `VERCEL_TOKEN` — a Vercel personal token with Deploy permissions.
+  - `VERCEL_ORG_ID` — your Vercel organization ID.
+  - `VERCEL_PROJECT_ID` — the Vercel project ID for this repository.
+- You can obtain `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` from the Vercel dashboard for your project, or by using the Vercel CLI.
+
+
 - The server-side Hono app is served via `api/[[...all]].ts` for Vercel compatibility.
 - If you need to bundle the server locally, run `npm run build:server` which uses `esbuild` to produce `dist/boot.js`.
 
