@@ -39,7 +39,11 @@ export class HttpClient {
 
     try {
       const payload: string | undefined =
-        body === undefined ? undefined : typeof body === "string" ? body : JSON.stringify(body);
+        body === undefined
+          ? undefined
+          : typeof body === "string"
+            ? body
+            : JSON.stringify(body);
 
       const response = await fetch(url.toString(), {
         ...rest,

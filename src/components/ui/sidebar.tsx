@@ -608,11 +608,11 @@ function SidebarMenuSkeleton({
 }) {
   /* eslint-disable react-refresh/only-export-components */
   // Random width between 50 to 90% — initialize after mount to avoid impure calls during render.
-  const [width, setWidth] = React.useState<string | null>(null)
+  const [width, setWidth] = React.useState<string | null>(null);
   React.useEffect(() => {
-    setWidth(`${Math.floor(Math.random() * 40) + 50}%`)
-  }, [])
-  const effectiveWidth = width ?? "70%"
+    setWidth(`${Math.floor(Math.random() * 40) + 50}%`);
+  }, []);
+  const effectiveWidth = width ?? "70%";
 
   return (
     <div
@@ -630,9 +630,11 @@ function SidebarMenuSkeleton({
       <Skeleton
         className="h-4 max-w-(--skeleton-width) flex-1"
         data-sidebar="menu-skeleton-text"
-        style={{
-          "--skeleton-width": effectiveWidth,
-        } as React.CSSProperties}
+        style={
+          {
+            "--skeleton-width": effectiveWidth,
+          } as React.CSSProperties
+        }
       />
     </div>
   );
