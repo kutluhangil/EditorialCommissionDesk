@@ -1,107 +1,71 @@
-# EditorialCommissionDesk
+<div align="center">
 
-This repository is prepared for deployment to Vercel. It contains a Vite + React frontend and a Hono-based Node server routed under `/api`.
+<img src="docs/media/hero.svg" alt="Editorial Commission Desk — an illustrator's portfolio and commission portal" width="100%">
 
-Quick setup
+<p>
+  <a href="https://editorial-commission-desk.vercel.app"><img alt="Live" src="https://img.shields.io/badge/live-open%20the%20desk-d9483b?style=for-the-badge&labelColor=0e0d0c"></a>
+  <img alt="tRPC" src="https://img.shields.io/badge/tRPC-Hono-2f6fb3?style=for-the-badge&labelColor=0e0d0c">
+  <img alt="Drizzle" src="https://img.shields.io/badge/Drizzle-MySQL-e8b04a?style=for-the-badge&labelColor=0e0d0c">
+  <img alt="React" src="https://img.shields.io/badge/React-shadcn%2Fui-d9483b?style=for-the-badge&labelColor=0e0d0c">
+</p>
 
-1. Copy environment variables from `.env.example` into Vercel project settings (or create a `.env` locally for development).
-2. Connect this GitHub repository to Vercel (https://vercel.com/new) and ensure the following settings:
-   - Build Command: `npm run build`
-   - Output Directory: `dist/public`
-3. Add required Environment Variables in Vercel (see `.env.example`).
+<p><em>A portfolio for an editorial illustrator with a built-in commission portal:<br>
+clients submit a brief, follow its progress and receive the final files with rights documentation.</em></p>
 
-Local build & preview
+</div>
 
-```bash
+<img src="docs/media/divider.svg" width="100%" alt="">
+
+## What it is
+
+The public side shows selected work (editorial illustration, geometric portraiture, identity systems) and explains the process in three steps: submit a brief, refine through sketch rounds and colour studies, receive the final files. Behind a sign-in, clients and the studio share one dashboard for every commission.
+
+| | |
+|---|---|
+| **Brief form** | Project type, deliverables, deadline, budget, usage rights, visual references and a description. |
+| **Status tracking** | Submitted → in review → approved → in progress → delivered → completed (or cancelled). |
+| **Dashboard** | Clients see their commissions; admins see and move every brief. |
+| **File handling** | References and deliveries stored on S3 with presigned URLs. |
+| **Auth** | Cookie sessions with signed tokens and user / admin roles. |
+| **Type-safe API** | tRPC routers on a Hono server, shared contracts and Drizzle schema. |
+
+```mermaid
+flowchart LR
+  C[Client] --> B[Brief form · zod]
+  B --> T[tRPC · Hono /api]
+  T --> DB[(MySQL · Drizzle)]
+  T --> S3[(S3 · references + deliveries)]
+  DB --> D[Dashboard<br/>client · admin]
+  A[Studio] --> D
+```
+
+<img src="docs/media/divider.svg" width="100%" alt="">
+
+## Türkçe özet
+
+**Editorial Commission Desk**, bir editoryal illüstratör için hazırlanmış portfolyo ve sipariş portalı. Ziyaretçiler seçili işleri ve üç adımlı çalışma sürecini görüyor; müşteriler proje türü, teslimatlar, tarih, bütçe ve kullanım haklarıyla brif gönderip siparişin durumunu panelden takip ediyor. Hono üzerinde tRPC, Drizzle ile MySQL ve dosyalar için S3 kullanılıyor.
+
+<img src="docs/media/divider.svg" width="100%" alt="">
+
+## Development
+
+```sh
 npm install
-npm run build
-npm run preview
+cp .env.example .env         # database URL, S3 bucket, session secret
+npm run dev                  # Vite frontend
+npm run build && npm run build:server
+npm start
 ```
 
-Notes
-
-## CI / Auto Deploy
-
-- This repository includes a GitHub Actions workflow at `.github/workflows/vercel-deploy.yml` which builds and deploys to Vercel on pushes to `main`.
-- Before the workflow can deploy, set the following repository secrets in GitHub (Repository -> Settings -> Secrets):
-  - `VERCEL_TOKEN` — a Vercel personal token with Deploy permissions.
-  - `VERCEL_ORG_ID` — your Vercel organization ID.
-  - `VERCEL_PROJECT_ID` — the Vercel project ID for this repository.
-- You can obtain `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` from the Vercel dashboard for your project, or by using the Vercel CLI.
-
-- The server-side Hono app is served via `api/[[...all]].ts` for Vercel compatibility.
-- If you need to bundle the server locally, run `npm run build:server` which uses `esbuild` to produce `dist/boot.js`.
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```
+src/pages/      home (portfolio), login, dashboard
+api/            Hono server, tRPC routers (auth, commission), middleware
+db/             Drizzle schema, relations, migrations, seed
+contracts/      shared types, constants and errors
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+<div align="center">
+<br>
+<a href="https://github.com/kutluhangil"><img src="docs/media/signature.svg" width="100%" alt="Built by kutluhangil"></a>
+<sub>Good work starts with a good brief.</sub>
+</div>

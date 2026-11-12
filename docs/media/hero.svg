@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="Editorial Commission Desk — an illustrator's portfolio and commission portal">
+<style>
+.bg{animation:bg 12s linear infinite}
+@keyframes bg{0%,8%{fill:#f5f1e8}28%{fill:#3a3530}48%,80%{fill:#0e0d0c}90%,100%{fill:#f5f1e8}}
+.ink{animation:ink 12s linear infinite}
+@keyframes ink{0%,8%{fill:#1f1c18}28%{fill:#f7f3ea}48%,80%{fill:#efeae0}90%,100%{fill:#1f1c18}}
+.rule{animation:rule 12s linear infinite}
+@keyframes rule{0%,8%{stroke:#1f1c1833}28%{stroke:#f7f3ea33}48%,80%{stroke:#efeae033}90%,100%{stroke:#1f1c1833}}
+.panel{animation:panel 12s linear infinite}
+@keyframes panel{0%,8%{fill:#1f1c1812}28%{fill:#f7f3ea12}48%,80%{fill:#efeae012}90%,100%{fill:#1f1c1812}}
+.muted{opacity:.72}
+.stars{animation:stars 12s linear infinite}
+@keyframes stars{0%,8%{opacity:0}28%{opacity:.25}48%,80%{opacity:.9}90%,100%{opacity:0}}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.25}}
+.lit{filter:drop-shadow(0 0 4px currentColor)}
+.pulse{animation:pulse 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+@keyframes spin{0%{transform:scaleX(1)}50%{transform:scaleX(0)}100%{transform:scaleX(-1)}}
+@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(3.2);opacity:0}}
+@keyframes dash{to{stroke-dashoffset:-20}}
+@keyframes grow{0%{transform:scaleY(.08)}35%,80%{transform:scaleY(1)}100%{transform:scaleY(.08)}}
+@keyframes draw{0%{stroke-dashoffset:700}45%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-700}}
+@keyframes blink{50%{opacity:0}}
+@keyframes feed{0%{transform:translateY(150px);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateY(-30px);opacity:0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes slide{to{transform:translateX(100px)}}
+@keyframes eq{from{transform:scaleY(.15)}to{transform:scaleY(1)}}
+@keyframes drop{0%,6%{transform:scaleY(0);opacity:0}16%,88%{transform:scaleY(1);opacity:1}96%,100%{transform:scaleY(0);opacity:0}}
+@keyframes gauge{0%,10%{stroke-dashoffset:390}40%,85%{stroke-dashoffset:110}100%{stroke-dashoffset:390}}
+@keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes sweep{0%{transform:skewX(-18deg) translateX(0)}60%,100%{transform:skewX(-18deg) translateX(788px)}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect class="bg" width="1200" height="440" rx="28" fill="#f5f1e8"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" letter-spacing="2.4"><text class="ink muted" x="64" y="104">PORTFOLIO + PORTAL · REACT + HONO + TRPC</text></g>
+<text class="ink" x="60" y="200" font-family="'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif" font-style="italic" font-size="78" letter-spacing="-1">Commission</text>
+<text class="ink" x="60" y="282" font-family="'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif" font-style="italic" font-size="78" letter-spacing="-1">Desk.</text>
+<text class="ink muted" x="64" y="336" font-family="'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif" font-size="20">From brief to delivery, in one studio desk.</text>
+<line class="rule" x1="64" y1="372" x2="1136" y2="372"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" letter-spacing="1.8">
+  <text class="ink muted" x="64" y="404">BRIEF · BUDGET · RIGHTS</text>
+  <text class="ink muted" x="600" y="404" text-anchor="middle">7-STAGE STATUS TRACKING</text>
+  <text class="ink muted" x="1136" y="404" text-anchor="end">DRIZZLE · MYSQL · S3</text>
+</g>
+<rect class="panel rule" x="652" y="92" width="488" height="262" rx="24"/>
+<g class="stars"><circle cx="820.5" cy="232.2" r="0.8" fill="#fff" style="animation:tw 2.6s ease-in-out 1.3s infinite"/><circle cx="671.1" cy="144.1" r="0.7" fill="#fff" style="animation:tw 3.4s ease-in-out 0.3s infinite"/><circle cx="729.2" cy="317.6" r="0.6" fill="#fff" style="animation:tw 3.2s ease-in-out 1.7s infinite"/><circle cx="897.2" cy="316.4" r="1.4" fill="#fff" style="animation:tw 2.1s ease-in-out 1.2s infinite"/><circle cx="827.3" cy="195.8" r="1.3" fill="#fff" style="animation:tw 3.6s ease-in-out 1.2s infinite"/><circle cx="744.5" cy="175.5" r="1.2" fill="#fff" style="animation:tw 1.9s ease-in-out 0.3s infinite"/><circle cx="856.5" cy="254.7" r="1.9" fill="#fff" style="animation:tw 2.7s ease-in-out 1.8s infinite"/><circle cx="1089.8" cy="214.1" r="0.7" fill="#fff" style="animation:tw 3.1s ease-in-out 0.8s infinite"/><circle cx="1051.2" cy="123.1" r="1.5" fill="#fff" style="animation:tw 1.8s ease-in-out 1.5s infinite"/><circle cx="750.1" cy="152.9" r="1.1" fill="#fff" style="animation:tw 2.9s ease-in-out 0s infinite"/><circle cx="941.3" cy="298.7" r="1.1" fill="#fff" style="animation:tw 2.2s ease-in-out 0.4s infinite"/><circle cx="923.7" cy="196.8" r="1.4" fill="#fff" style="animation:tw 2.6s ease-in-out 0.7s infinite"/><circle cx="850.8" cy="181.3" r="0.6" fill="#fff" style="animation:tw 3s ease-in-out 1.5s infinite"/><circle cx="1022.4" cy="341.8" r="0.8" fill="#fff" style="animation:tw 2.4s ease-in-out 0.4s infinite"/><circle cx="898.3" cy="223.4" r="1.4" fill="#fff" style="animation:tw 3s ease-in-out 0.6s infinite"/><circle cx="705.1" cy="111.2" r="1.2" fill="#fff" style="animation:tw 2.4s ease-in-out 1.2s infinite"/><circle cx="977.9" cy="341.6" r="1.1" fill="#fff" style="animation:tw 3.8s ease-in-out 1.4s infinite"/><circle cx="974.5" cy="202.4" r="1.1" fill="#fff" style="animation:tw 1.7s ease-in-out 0.4s infinite"/><circle cx="878.7" cy="163.1" r="1.5" fill="#fff" style="animation:tw 1.7s ease-in-out 0.5s infinite"/><circle cx="770" cy="242.8" r="0.6" fill="#fff" style="animation:tw 2.7s ease-in-out 0.6s infinite"/><circle cx="1052" cy="161.9" r="1.3" fill="#fff" style="animation:tw 1.8s ease-in-out 1.4s infinite"/><circle cx="924.7" cy="106.4" r="1.6" fill="#fff" style="animation:tw 2s ease-in-out 1.2s infinite"/><circle cx="995.8" cy="255" r="1.6" fill="#fff" style="animation:tw 2.9s ease-in-out 1.7s infinite"/><circle cx="742.4" cy="221.7" r="1.3" fill="#fff" style="animation:tw 2.6s ease-in-out 0.9s infinite"/><circle cx="1088.1" cy="253.8" r="0.9" fill="#fff" style="animation:tw 2.2s ease-in-out 0.7s infinite"/><circle cx="1003.6" cy="195.9" r="1.9" fill="#fff" style="animation:tw 3.7s ease-in-out 0.1s infinite"/></g>
+<defs><linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="gc"><rect x="652" y="92" width="488" height="262" rx="24"/></clipPath></defs><g style="animation:lift 6s ease-in-out 0s infinite"><rect x="686" y="114" width="132" height="104" rx="14" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".16"/>
+<rect x="696" y="124" width="112" height="58" rx="9" fill="#d9483b" fill-opacity=".85"/>
+<rect x="696" y="190" width="58.3" height="8" rx="4" fill="#fff" fill-opacity=".8"/><rect x="696" y="203" width="34" height="6" rx="3" fill="#fff" fill-opacity=".45"/></g><g style="animation:lift 6s ease-in-out -1s infinite"><rect x="838" y="114" width="132" height="104" rx="14" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".16"/>
+<rect x="848" y="124" width="112" height="58" rx="9" fill="#2f6fb3" fill-opacity=".85"/>
+<rect x="848" y="190" width="68.2" height="8" rx="4" fill="#fff" fill-opacity=".8"/><rect x="848" y="203" width="34" height="6" rx="3" fill="#fff" fill-opacity=".45"/></g><g style="animation:lift 6s ease-in-out -2s infinite"><rect x="990" y="114" width="132" height="104" rx="14" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".16"/>
+<rect x="1000" y="124" width="112" height="58" rx="9" fill="#e8b04a" fill-opacity=".85"/>
+<rect x="1000" y="190" width="96.8" height="8" rx="4" fill="#fff" fill-opacity=".8"/><rect x="1000" y="203" width="34" height="6" rx="3" fill="#fff" fill-opacity=".45"/></g><g style="animation:lift 6s ease-in-out -3s infinite"><rect x="686" y="236" width="132" height="104" rx="14" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".16"/>
+<rect x="696" y="246" width="112" height="58" rx="9" fill="#2f6fb3" fill-opacity=".85"/>
+<rect x="696" y="312" width="59.6" height="8" rx="4" fill="#fff" fill-opacity=".8"/><rect x="696" y="325" width="34" height="6" rx="3" fill="#fff" fill-opacity=".45"/></g><g style="animation:lift 6s ease-in-out -4s infinite"><rect x="838" y="236" width="132" height="104" rx="14" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".16"/>
+<rect x="848" y="246" width="112" height="58" rx="9" fill="#e8b04a" fill-opacity=".85"/>
+<rect x="848" y="312" width="59.4" height="8" rx="4" fill="#fff" fill-opacity=".8"/><rect x="848" y="325" width="34" height="6" rx="3" fill="#fff" fill-opacity=".45"/></g><g style="animation:lift 6s ease-in-out -5s infinite"><rect x="990" y="236" width="132" height="104" rx="14" fill="#000" fill-opacity=".25" stroke="#fff" stroke-opacity=".16"/>
+<rect x="1000" y="246" width="112" height="58" rx="9" fill="#d9483b" fill-opacity=".85"/>
+<rect x="1000" y="312" width="54.1" height="8" rx="4" fill="#fff" fill-opacity=".8"/><rect x="1000" y="325" width="34" height="6" rx="3" fill="#fff" fill-opacity=".45"/></g>
+<g clip-path="url(#gc)"><rect x="512" y="92" width="120" height="262" fill="url(#sh)" transform="skewX(-18)" style="animation:sweep 4s ease-in-out infinite"/></g>
+</svg>
