@@ -25,5 +25,25 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return undefined;
+          if (id.includes("react-router") || id.includes("react-dom") || id.includes("/react/")) {
+            return "vendor-react";
+          }
+          if (id.includes("@trpc") || id.includes("@tanstack/react-query") || id.includes("superjson")) {
+            return "vendor-trpc";
+          }
+          if (id.includes("@radix-ui") || id.includes("cmdk") || id.includes("sonner")) {
+            return "vendor-radix";
+          }
+          if (id.includes("lucide-react")) {
+            return "vendor-icons";
+          }
+          return undefined;
+        },
+      },
+    },
   },
 });

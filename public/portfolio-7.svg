@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+  <rect width="900" height="1200" fill="#F8F5EE" />
+  <!-- Thick Mondrian Structural Grid -->
+  <rect x="0" y="0" width="900" height="16" fill="#111111" />
+  <rect x="0" y="1184" width="900" height="16" fill="#111111" />
+  <rect x="0" y="0" width="16" height="1200" fill="#111111" />
+  <rect x="884" y="0" width="16" height="1200" fill="#111111" />
+
+  <!-- Top Red Opera Curtain Block -->
+  <rect x="16" y="16" width="560" height="390" fill="#E63946" />
+  <rect x="576" y="16" width="14" height="1168" fill="#111111" />
+  <rect x="590" y="16" width="294" height="210" fill="#1D3557" />
+  <rect x="590" y="226" width="294" height="14" fill="#111111" />
+  <rect x="590" y="240" width="294" height="166" fill="#F4A261" />
+  <rect x="16" y="406" width="868" height="14" fill="#111111" />
+
+  <!-- Acoustic Stage Rings -->
+  <circle cx="300" cy="700" r="245" fill="#111111" />
+  <circle cx="300" cy="700" r="195" fill="#F8F5EE" />
+  <circle cx="300" cy="700" r="145" fill="#1D3557" />
+  <circle cx="300" cy="700" r="88" fill="#F4A261" />
+  <circle cx="300" cy="700" r="38" fill="#E63946" />
+
+  <!-- Vertical Cut Line Across Circle -->
+  <rect x="293" y="420" width="14" height="560" fill="#111111" />
+  <rect x="16" y="693" width="868" height="14" fill="#111111" />
+
+  <!-- Constructivist Stage Bars -->
+  <rect x="615" y="455" width="44" height="210" fill="#E63946" />
+  <rect x="680" y="455" width="44" height="210" fill="#111111" />
+  <rect x="745" y="455" width="44" height="210" fill="#1D3557" />
+  <rect x="810" y="455" width="44" height="210" fill="#F4A261" />
+
+  <!-- Lower Right Blue & Ochre Panels -->
+  <rect x="16" y="965" width="868" height="14" fill="#111111" />
+  <rect x="590" y="707" width="294" height="258" fill="#1D3557" />
+  <polygon points="590,965 884,707 884,965" fill="#E63946" />
+
+  <!-- Constructivist Poster Typography -->
+  <text x="54" y="110" font-family="Helvetica Neue, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="8" fill="#FFFFFF">STAATSOPER WIEN</text>
+  <text x="54" y="235" font-family="Helvetica Neue, Arial, sans-serif" font-size="112" font-weight="900" letter-spacing="-4" fill="#111111">OPERA</text>
+  <text x="54" y="348" font-family="Helvetica Neue, Arial, sans-serif" font-size="96" font-weight="900" letter-spacing="-3" fill="#FFFFFF">2026/27</text>
+
+  <text x="622" y="102" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#F4A261">WINTER</text>
+  <text x="622" y="142" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#FFFFFF">CYCLE</text>
+  <text x="622" y="182" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="3" fill="#FFFFFF">DIN A1 SILKSCREEN</text>
+
+  <text x="622" y="308" font-family="Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#111111">3 SPOT</text>
+  <text x="622" y="348" font-family="Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="2" fill="#111111">PANTONE</text>
+
+  <!-- Bottom Editorial Specimen Strip -->
+  <text x="48" y="1045" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="3" fill="#111111">CONSTRUCTIVIST OPERA SEASON · SERIES I–IV</text>
+  <text x="48" y="1095" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#555555">PMS 485C VERMILION · PMS 534C COBALT · PMS 1375C OCHRE · DEEP BLACK</text>
+  <rect x="48" y="1125" width="800" height="4" fill="#111111" />
+  <text x="48" y="1156" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#E63946">ATELIER MONDRIAN · COMMISSION ARCHIVE 07</text>
+</svg>

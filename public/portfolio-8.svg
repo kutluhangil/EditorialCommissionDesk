@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+  <rect width="900" height="1200" fill="#111827" />
+  <!-- Architectural Swiss Blueprint Grid -->
+  <g stroke="#1F2937" stroke-width="1">
+    <line x1="75" y1="0" x2="75" y2="1200" />
+    <line x1="150" y1="0" x2="150" y2="1200" />
+    <line x1="225" y1="0" x2="225" y2="1200" />
+    <line x1="300" y1="0" x2="300" y2="1200" />
+    <line x1="375" y1="0" x2="375" y2="1200" />
+    <line x1="450" y1="0" x2="450" y2="1200" />
+    <line x1="525" y1="0" x2="525" y2="1200" />
+    <line x1="600" y1="0" x2="600" y2="1200" />
+    <line x1="675" y1="0" x2="675" y2="1200" />
+    <line x1="750" y1="0" x2="750" y2="1200" />
+    <line x1="825" y1="0" x2="825" y2="1200" />
+    <line x1="0" y1="120" x2="900" y2="120" />
+    <line x1="0" y1="240" x2="900" y2="240" />
+    <line x1="0" y1="360" x2="900" y2="360" />
+    <line x1="0" y1="480" x2="900" y2="480" />
+    <line x1="0" y1="600" x2="900" y2="600" />
+    <line x1="0" y1="720" x2="900" y2="720" />
+    <line x1="0" y1="840" x2="900" y2="840" />
+    <line x1="0" y1="960" x2="900" y2="960" />
+    <line x1="0" y1="1080" x2="900" y2="1080" />
+  </g>
+
+  <!-- Outer Crisp Frame -->
+  <rect x="36" y="36" width="828" height="1128" fill="none" stroke="#F8F5EE" stroke-width="3" />
+
+  <!-- Top Header Bar -->
+  <rect x="36" y="36" width="828" height="164" fill="#F8F5EE" />
+  <rect x="36" y="36" width="164" height="164" fill="#E63946" />
+  <text x="86" y="138" font-family="Helvetica Neue, Arial, sans-serif" font-size="64" font-weight="900" fill="#FFFFFF">08</text>
+  <text x="228" y="96" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="5" fill="#1D3557">MIT PRESS · DATA JOURNALISM</text>
+  <text x="228" y="152" font-family="Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="900" letter-spacing="-1" fill="#111111">SYNTHETIC MINDS</text>
+
+  <!-- Isometric Polyhedral Network -->
+  <g stroke="#FFFFFF" stroke-width="2.5">
+    <line x1="450" y1="320" x2="210" y2="490" stroke="#F4A261" />
+    <line x1="450" y1="320" x2="690" y2="490" stroke="#F4A261" />
+    <line x1="210" y1="490" x2="450" y2="650" stroke="#E63946" />
+    <line x1="690" y1="490" x2="450" y2="650" stroke="#E63946" />
+    <line x1="210" y1="490" x2="210" y2="780" stroke="#93C5FD" />
+    <line x1="690" y1="490" x2="690" y2="780" stroke="#93C5FD" />
+    <line x1="450" y1="650" x2="450" y2="940" stroke="#FFFFFF" />
+    <line x1="210" y1="780" x2="450" y2="940" stroke="#F4A261" />
+    <line x1="690" y1="780" x2="450" y2="940" stroke="#F4A261" />
+    <line x1="210" y1="780" x2="690" y2="490" stroke="#475569" stroke-dasharray="8 8" />
+    <line x1="690" y1="780" x2="210" y2="490" stroke="#475569" stroke-dasharray="8 8" />
+  </g>
+
+  <!-- Isometric Cube Planes -->
+  <polygon points="450,415 585,495 450,575 315,495" fill="#F4A261" fill-opacity="0.92" stroke="#111827" stroke-width="4" />
+  <polygon points="315,495 450,575 450,745 315,665" fill="#E63946" fill-opacity="0.92" stroke="#111827" stroke-width="4" />
+  <polygon points="585,495 450,575 450,745 585,665" fill="#1D3557" fill-opacity="0.95" stroke="#111827" stroke-width="4" />
+
+  <!-- Nodes -->
+  <circle cx="450" cy="320" r="18" fill="#F4A261" stroke="#FFFFFF" stroke-width="4" />
+  <circle cx="210" cy="490" r="18" fill="#E63946" stroke="#FFFFFF" stroke-width="4" />
+  <circle cx="690" cy="490" r="18" fill="#1D3557" stroke="#FFFFFF" stroke-width="4" />
+  <circle cx="210" cy="780" r="16" fill="#F8F5EE" stroke="#E63946" stroke-width="4" />
+  <circle cx="690" cy="780" r="16" fill="#F8F5EE" stroke="#1D3557" stroke-width="4" />
+  <circle cx="450" cy="940" r="22" fill="#E63946" stroke="#FFFFFF" stroke-width="4" />
+
+  <!-- Data Callout Labels -->
+  <rect x="78" y="300" width="230" height="58" fill="#1F2937" stroke="#F4A261" stroke-width="2" />
+  <text x="96" y="325" font-family="Courier New, monospace" font-size="14" font-weight="700" fill="#F4A261">LATENT WEIGHTS · FIG 2.4</text>
+  <text x="96" y="346" font-family="Courier New, monospace" font-size="13" fill="#E5E7EB">320B CONNECTIONS INDEXED</text>
+
+  <rect x="595" y="830" width="235" height="58" fill="#1F2937" stroke="#E63946" stroke-width="2" />
+  <text x="612" y="855" font-family="Courier New, monospace" font-size="14" font-weight="700" fill="#E63946">TOPOLOGY CORRIDOR</text>
+  <text x="612" y="876" font-family="Courier New, monospace" font-size="13" fill="#E5E7EB">VECTOR SVG + CMYK SPREAD</text>
+
+  <!-- Bottom Metrics Bar -->
+  <rect x="36" y="1020" width="828" height="144" fill="#0B1120" stroke="#F8F5EE" stroke-width="2" />
+  <text x="68" y="1068" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="4" fill="#F4A261">CARTOGRAPHY OF SYNTHETIC MINDS</text>
+  <text x="68" y="1104" font-family="Courier New, monospace" font-size="16" fill="#CBD5E1">ISOMETRIC EDITORIAL SPREAD · SCALE 1:25 · PLATE CODE ECD-MIT-08</text>
+  <rect x="68" y="1124" width="180" height="10" fill="#E63946" />
+  <rect x="256" y="1124" width="180" height="10" fill="#F4A261" />
+  <rect x="444" y="1124" width="180" height="10" fill="#1D3557" />
+</svg>

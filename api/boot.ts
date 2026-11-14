@@ -10,7 +10,13 @@ import { Paths } from "@contracts/constants";
 
 const app = new Hono<{ Bindings: HttpBindings }>();
 
-app.use(bodyLimit({ maxSize: 50 * 1024 * 1024 }));
+app.use(async (c, next) => {
+  await next();
+  c.res.headers.set("X-Content-Type-Options", "nosniff");
+  c.res.headers.set("X-Frame-Options", "SAMEORIGIN");
+  c.res.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+});
+app.use(bodyLimit({ maxSize: 6 * 1024 * 1024 }));
 app.get(Paths.oauthCallback, createOAuthCallbackHandler());
 app.use("/api/trpc/*", async (c) => {
   return fetchRequestHandler({

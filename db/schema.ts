@@ -90,3 +90,82 @@ export type CommissionDraft = typeof commissionDrafts.$inferSelect;
 export type InsertCommissionDraft = typeof commissionDrafts.$inferInsert;
 export type Message = typeof messages.$inferSelect;
 export type InsertMessage = typeof messages.$inferInsert;
+
+export type ProofStage = "wireframe" | "color_study" | "final_press";
+
+export interface ProofDeliverable {
+  id: number;
+  commissionId: number;
+  versionLabel: string;
+  stage: ProofStage;
+  imageUrl: string;
+  fileFormat: string;
+  notes: string;
+  lockedUntilPaid: boolean;
+  createdAt: Date;
+}
+
+export interface ProofPinAnnotation {
+  id: number;
+  commissionId: number;
+  deliverableId: number;
+  xPercent: number;
+  yPercent: number;
+  authorName: string;
+  authorRole: "client" | "studio";
+  comment: string;
+  resolved: boolean;
+  createdAt: Date;
+}
+
+export interface MilestoneInvoice {
+  id: number;
+  commissionId: number;
+  title: string;
+  percentage: number;
+  amountUsd: number;
+  status: "pending" | "paid";
+  dueLabel: string;
+  paidAt: Date | null;
+}
+
+export interface CommissionRevisionState {
+  commissionId: number;
+  includedRounds: number;
+  usedRounds: number;
+  extraRoundFeeUsd: number;
+}
+
+export interface CommissionAuditEntry {
+  id: number;
+  commissionId: number;
+  actorName: string;
+  actorRole: "client" | "studio" | "system";
+  action: string;
+  detail: string;
+  createdAt: Date;
+}
+
+export interface CommissionWorkspaceData {
+  commission: Commission;
+  deliverables: ProofDeliverable[];
+  pins: ProofPinAnnotation[];
+  milestones: MilestoneInvoice[];
+  revisionState: CommissionRevisionState;
+  auditLogs: CommissionAuditEntry[];
+  messages: Message[];
+}
+
+export interface CommissionWorkspaceSummary {
+  commissionId: number;
+  deliverablesCount: number;
+  openPinsCount: number;
+  resolvedPinsCount: number;
+  paidAmountUsd: number;
+  totalAmountUsd: number;
+  usedRounds: number;
+  includedRounds: number;
+  extraRoundFeeUsd: number;
+  milestones: MilestoneInvoice[];
+  auditCount: number;
+}

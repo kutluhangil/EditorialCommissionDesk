@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <pattern id="atelier-mat" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.7" opacity="0.28" />
+    </pattern>
+    <radialGradient id="wax-grad" cx="38%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF5A67" />
+      <stop offset="55%" stop-color="#E63946" />
+      <stop offset="100%" stop-color="#9B1B27" />
+    </radialGradient>
+    <linearGradient id="brass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7DF8D" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#8A6C1E" />
+    </linearGradient>
+    <filter id="dossier-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="6" dy="10" stdDeviation="9" flood-color="#05080F" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Archival Studio Grid Surface -->
+  <rect width="800" height="500" fill="#F2ECE0" />
+  <rect width="800" height="500" fill="url(#atelier-mat)" />
+
+  <!-- Corner Swiss Registration Marks -->
+  <g stroke="#E63946" stroke-width="1.5" fill="none">
+    <path d="M 24 44 L 24 24 L 44 24" />
+    <path d="M 756 24 L 776 24 L 776 44" />
+    <path d="M 24 456 L 24 476 L 44 476" />
+    <path d="M 756 476 L 776 476 L 776 456" />
+  </g>
+
+  <!-- Underlay Print Sheet peeking out right -->
+  <g filter="url(#dossier-shadow)" transform="translate(340, 48) rotate(4)">
+    <rect x="0" y="0" width="380" height="390" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+    <rect x="22" y="22" width="336" height="190" fill="#1D3557" />
+    <circle cx="190" cy="117" r="68" fill="#F4A261" />
+    <rect x="22" y="232" width="160" height="132" fill="#E63946" />
+    <rect x="198" y="232" width="160" height="132" fill="#FAF6EE" stroke="#0A0A0A" stroke-width="1.5" />
+  </g>
+
+  <!-- Main Archival Portfolio Dossier Folder -->
+  <g filter="url(#dossier-shadow)" transform="translate(86, 62)">
+    <rect x="0" y="0" width="440" height="370" fill="#161A23" stroke="#0A0A0A" stroke-width="2.5" />
+    <!-- Top Geometric Cotton Flap Overlay -->
+    <polygon points="0,0 440,0 440,174 220,236 0,174" fill="#232A38" stroke="#0A0A0A" stroke-width="2" />
+    <!-- Gold & Primary Foil Geometric Trim Inside Flap -->
+    <rect x="28" y="24" width="384" height="12" fill="#D4AF37" />
+    <rect x="28" y="44" width="120" height="72" fill="#1D3557" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="160" y="44" width="120" height="72" fill="#E63946" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="292" y="44" width="120" height="72" fill="#F4A261" stroke="#0A0A0A" stroke-width="1.5" />
+
+    <!-- Tied Black Linen Dossier Cords -->
+    <line x1="220" y1="0" x2="220" y2="370" stroke="#0A0A0A" stroke-width="4" />
+    <line x1="0" y1="236" x2="440" y2="236" stroke="#0A0A0A" stroke-width="4" />
+
+    <!-- Sculpted Vermilion Wax Seal Over Cord Intersection -->
+    <g transform="translate(220, 236)">
+      <path d="M -38 -12 C -46 6, -34 38, -8 40 C 18 44, 44 26, 40 -4 C 38 -32, 12 -44, -14 -40 C -30 -36, -34 -24, -38 -12 Z" fill="url(#wax-grad)" stroke="#681018" stroke-width="1.8" />
+      <circle cx="0" cy="0" r="26" fill="none" stroke="#F7DF8D" stroke-width="1.6" opacity="0.85" />
+      <!-- Mondrian Cross Geometry Inside Seal -->
+      <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="#FAF6EE" stroke-width="1.6" />
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#FAF6EE" stroke-width="1.6" />
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#FAF6EE" stroke-width="1.6" />
+      <rect x="1" y="-11" width="10" height="10" fill="#F4A261" />
+    </g>
+  </g>
+
+  <!-- Fanned Pantone Ticket Swatches (Bottom Right) -->
+  <g filter="url(#dossier-shadow)" transform="translate(548, 250)">
+    <g transform="rotate(-12)">
+      <rect x="0" y="0" width="84" height="156" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+      <rect x="8" y="8" width="68" height="102" fill="#1D3557" />
+    </g>
+    <g transform="translate(36, 4) rotate(2)">
+      <rect x="0" y="0" width="84" height="156" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+      <rect x="8" y="8" width="68" height="102" fill="#E63946" />
+    </g>
+    <g transform="translate(74, 16) rotate(14)">
+      <rect x="0" y="0" width="84" height="156" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+      <rect x="8" y="8" width="68" height="102" fill="#F4A261" />
+    </g>
+  </g>
+
+  <!-- Black & Brass Fountain Pen Diagonal on Mat -->
+  <g filter="url(#dossier-shadow)" transform="translate(514, 152) rotate(-26)">
+    <rect x="0" y="0" width="186" height="14" rx="2" fill="#0F172A" stroke="#000000" stroke-width="1.2" />
+    <rect x="44" y="0" width="10" height="14" fill="url(#brass-grad)" />
+    <polygon points="186,2 214,7 186,12" fill="url(#brass-grad)" stroke="#0A0A0A" stroke-width="0.8" />
+    <line x1="198" y1="7" x2="214" y2="7" stroke="#0A0A0A" stroke-width="0.9" />
+  </g>
+</svg>

@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <pattern id="cutting-mat-grid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#252B3B" stroke-width="0.8" />
+    </pattern>
+    <pattern id="cutting-mat-major" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#cutting-mat-grid)" />
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#353E54" stroke-width="1.3" />
+    </pattern>
+    <pattern id="halftone-vermilion" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.7" fill="#E63946" opacity="0.55" />
+    </pattern>
+    <pattern id="halftone-cobalt" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#1D3557" opacity="0.45" />
+    </pattern>
+    <filter id="drop-shadow" x="-8%" y="-8%" width="120%" height="125%">
+      <feDropShadow dx="4" dy="8" stdDeviation="8" flood-color="#05070B" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <!-- Dark Slate Cutting Mat Background -->
+  <rect width="800" height="500" fill="#141821" />
+  <rect width="800" height="500" fill="url(#cutting-mat-major)" />
+
+  <!-- Subtle Steel Scale on Left Margin -->
+  <g opacity="0.85">
+    <rect x="24" y="34" width="18" height="432" fill="#2A3140" stroke="#64748B" stroke-width="1" />
+    <g stroke="#94A3B8" stroke-width="1">
+      <line x1="24" y1="60" x2="36" y2="60" />
+      <line x1="24" y1="90" x2="32" y2="90" />
+      <line x1="24" y1="120" x2="36" y2="120" />
+      <line x1="24" y1="150" x2="32" y2="150" />
+      <line x1="24" y1="180" x2="36" y2="180" />
+      <line x1="24" y1="210" x2="32" y2="210" />
+      <line x1="24" y1="240" x2="38" y2="240" />
+      <line x1="24" y1="270" x2="32" y2="270" />
+      <line x1="24" y1="300" x2="36" y2="300" />
+      <line x1="24" y1="330" x2="32" y2="330" />
+      <line x1="24" y1="360" x2="36" y2="360" />
+      <line x1="24" y1="390" x2="32" y2="390" />
+      <line x1="24" y1="420" x2="36" y2="420" />
+    </g>
+  </g>
+
+  <!-- Open Double-Page Feature Spread Sheet (Right/Back Layer) -->
+  <g filter="url(#drop-shadow)" transform="translate(278, 58)">
+    <rect x="0" y="0" width="474" height="364" fill="#FAF6EE" stroke="#0A0A0A" stroke-width="2" />
+    <!-- Center Gutter Fold Shadow -->
+    <line x1="237" y1="0" x2="237" y2="364" stroke="#D6CFC2" stroke-width="3" />
+    <line x1="237" y1="0" x2="237" y2="364" stroke="#111111" stroke-width="0.75" stroke-dasharray="4 3" />
+
+    <!-- Left Page of Spread: Geometric Architecture Feature -->
+    <rect x="20" y="22" width="196" height="148" fill="#1D3557" stroke="#0A0A0A" stroke-width="1.5" />
+    <circle cx="118" cy="96" r="54" fill="#F4A261" />
+    <path d="M 64 170 L 172 22 L 216 170 Z" fill="#E63946" opacity="0.92" />
+    <rect x="20" y="186" width="196" height="8" fill="#0A0A0A" />
+    <!-- Faux Body Columns -->
+    <g fill="#4B5563" opacity="0.72">
+      <rect x="20" y="208" width="90" height="4" />
+      <rect x="20" y="218" width="90" height="4" />
+      <rect x="20" y="228" width="84" height="4" />
+      <rect x="20" y="238" width="90" height="4" />
+      <rect x="20" y="248" width="76" height="4" />
+      <rect x="20" y="264" width="90" height="4" />
+      <rect x="20" y="274" width="88" height="4" />
+      <rect x="20" y="284" width="68" height="4" />
+      <rect x="126" y="208" width="90" height="4" />
+      <rect x="126" y="218" width="82" height="4" />
+      <rect x="126" y="228" width="90" height="4" />
+      <rect x="126" y="238" width="86" height="4" />
+      <rect x="126" y="248" width="90" height="4" />
+      <rect x="126" y="264" width="90" height="4" />
+      <rect x="126" y="274" width="74" height="4" />
+    </g>
+
+    <!-- Right Page of Spread: Halftone Diagram & Callout Blocks -->
+    <rect x="258" y="22" width="194" height="28" fill="#0A0A0A" />
+    <rect x="258" y="64" width="92" height="162" fill="url(#halftone-vermilion)" stroke="#0A0A0A" stroke-width="1.2" />
+    <rect x="360" y="64" width="92" height="84" fill="#E63946" stroke="#0A0A0A" stroke-width="1.2" />
+    <rect x="360" y="158" width="92" height="68" fill="#F4A261" stroke="#0A0A0A" stroke-width="1.2" />
+    <rect x="258" y="242" width="194" height="90" fill="none" stroke="#1D3557" stroke-width="1.2" stroke-dasharray="3 2" />
+    <polyline points="274,312 316,272 358,292 406,254 438,268" fill="none" stroke="#1D3557" stroke-width="2.5" />
+    <circle cx="316" cy="272" r="4" fill="#E63946" />
+    <circle cx="406" cy="254" r="4" fill="#E63946" />
+
+    <!-- Bottom FOGRA Color Separation Bar -->
+    <g transform="translate(20, 340)">
+      <rect x="0" y="0" width="22" height="10" fill="#00AEEF" />
+      <rect x="24" y="0" width="22" height="10" fill="#EC008C" />
+      <rect x="48" y="0" width="22" height="10" fill="#FFF200" />
+      <rect x="72" y="0" width="22" height="10" fill="#111111" />
+      <rect x="96" y="0" width="22" height="10" fill="#E63946" />
+      <rect x="120" y="0" width="22" height="10" fill="#1D3557" />
+      <rect x="144" y="0" width="22" height="10" fill="#F4A261" />
+    </g>
+  </g>
+
+  <!-- Flagship Cover Proof Overlapping Left (Front Layer) -->
+  <g filter="url(#drop-shadow)" transform="translate(68, 42)">
+    <!-- Bleed Paper Perimeter -->
+    <rect x="0" y="0" width="290" height="398" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+    <!-- Trim Artwork Area (5mm Bleed Margin) -->
+    <rect x="14" y="14" width="262" height="370" fill="#FAF6EE" stroke="#0A0A0A" stroke-width="2" />
+
+    <!-- Masthead Bar -->
+    <rect x="14" y="14" width="262" height="46" fill="#0A0A0A" />
+    <rect x="26" y="27" width="138" height="18" fill="#FAF6EE" />
+    <rect x="176" y="27" width="88" height="18" fill="#E63946" />
+
+    <!-- De Stijl Constructivist Cover Composition -->
+    <rect x="14" y="60" width="174" height="190" fill="#1D3557" />
+    <rect x="188" y="60" width="88" height="114" fill="#E63946" />
+    <rect x="188" y="174" width="88" height="76" fill="#F4A261" />
+    <line x1="188" y1="60" x2="188" y2="384" stroke="#0A0A0A" stroke-width="5" />
+    <line x1="14" y1="250" x2="276" y2="250" stroke="#0A0A0A" stroke-width="5" />
+    <line x1="188" y1="174" x2="276" y2="174" stroke="#0A0A0A" stroke-width="5" />
+
+    <!-- Focal Geometric Circle & Arcs -->
+    <circle cx="101" cy="155" r="64" fill="#FAF6EE" stroke="#0A0A0A" stroke-width="3" />
+    <path d="M 101 91 A 64 64 0 0 1 165 155 L 101 155 Z" fill="#E63946" />
+    <path d="M 37 155 A 64 64 0 0 0 101 219 L 101 155 Z" fill="#F4A261" />
+    <rect x="14" y="250" width="174" height="134" fill="url(#halftone-cobalt)" />
+
+    <!-- Barcode Safe Zone Box (Bottom Right Cover) -->
+    <rect x="198" y="318" width="66" height="54" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+    <g fill="#0A0A0A">
+      <rect x="205" y="325" width="3" height="38" />
+      <rect x="210" y="325" width="1.5" height="38" />
+      <rect x="214" y="325" width="4" height="38" />
+      <rect x="220" y="325" width="2" height="38" />
+      <rect x="225" y="325" width="1.5" height="38" />
+      <rect x="229" y="325" width="3.5" height="38" />
+      <rect x="235" y="325" width="2" height="38" />
+      <rect x="240" y="325" width="4" height="38" />
+      <rect x="247" y="325" width="1.5" height="38" />
+      <rect x="251" y="325" width="3" height="38" />
+      <rect x="256" y="325" width="2" height="38" />
+    </g>
+
+    <!-- Swiss Crop Marks around Cover Trim -->
+    <g stroke="#E63946" stroke-width="1.2">
+      <line x1="14" y1="3" x2="14" y2="11" />
+      <line x1="3" y1="14" x2="11" y2="14" />
+      <line x1="276" y1="3" x2="276" y2="11" />
+      <line x1="279" y1="14" x2="287" y2="14" />
+      <line x1="14" y1="387" x2="14" y2="395" />
+      <line x1="3" y1="384" x2="11" y2="384" />
+      <line x1="276" y1="387" x2="276" y2="395" />
+      <line x1="279" y1="384" x2="287" y2="384" />
+    </g>
+  </g>
+
+  <!-- Floating Pantone Swatch Tickets on Lower Right -->
+  <g filter="url(#drop-shadow)" transform="translate(658, 355) rotate(-8)">
+    <rect x="0" y="0" width="96" height="44" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="6" y="6" width="26" height="32" fill="#E63946" />
+    <rect x="35" y="6" width="26" height="32" fill="#1D3557" />
+    <rect x="64" y="6" width="26" height="32" fill="#F4A261" />
+  </g>
+
+  <!-- Studio Registration Targets -->
+  <g stroke="#94A3B8" stroke-width="1" fill="none" opacity="0.65">
+    <circle cx="400" cy="22" r="6" />
+    <line x1="391" y1="22" x2="409" y2="22" />
+    <line x1="400" y1="13" x2="400" y2="31" />
+    <circle cx="400" cy="478" r="6" />
+    <line x1="391" y1="478" x2="409" y2="478" />
+    <line x1="400" y1="469" x2="400" y2="487" />
+  </g>
+</svg>

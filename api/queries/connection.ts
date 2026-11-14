@@ -16,3 +16,22 @@ export function getDb() {
   }
   return instance;
 }
+
+/**
+ * Execute a Drizzle query when DATABASE_URL is configured; otherwise (or on DB
+ * connection error) transparently use the in-memory store fallback.
+ */
+export async function withFallback<T>(
+  dbFn: () => Promise<T>,
+  memFn: () => T,
+): Promise<T> {
+  if (!env.hasDatabase) {
+    return memFn();
+  }
+  try {
+    return await dbFn();
+  } catch (err) {
+    console.warn("[db] Falling back to in-memory store:", err);
+    return memFn();
+  }
+}

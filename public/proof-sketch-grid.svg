@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#F7FAFC" />
+  <!-- Blueprint 12-Col Structural Grid -->
+  <g stroke="#93C5FD" stroke-width="1" stroke-dasharray="6 4">
+    <line x1="100" y1="60" x2="100" y2="840" />
+    <line x1="190" y1="60" x2="190" y2="840" />
+    <line x1="280" y1="60" x2="280" y2="840" />
+    <line x1="370" y1="60" x2="370" y2="840" />
+    <line x1="460" y1="60" x2="460" y2="840" />
+    <line x1="550" y1="60" x2="550" y2="840" />
+    <line x1="640" y1="60" x2="640" y2="840" />
+    <line x1="730" y1="60" x2="730" y2="840" />
+    <line x1="820" y1="60" x2="820" y2="840" />
+    <line x1="910" y1="60" x2="910" y2="840" />
+    <line x1="1000" y1="60" x2="1000" y2="840" />
+    <line x1="1100" y1="60" x2="1100" y2="840" />
+    <line x1="60" y1="150" x2="1140" y2="150" />
+    <line x1="60" y1="300" x2="1140" y2="300" />
+    <line x1="60" y1="450" x2="1140" y2="450" />
+    <line x1="60" y1="600" x2="1140" y2="600" />
+    <line x1="60" y1="750" x2="1140" y2="750" />
+  </g>
+
+  <!-- 5mm Trim & Bleed Box -->
+  <rect x="60" y="60" width="1080" height="780" fill="none" stroke="#1D3557" stroke-width="3" />
+  <rect x="85" y="85" width="1030" height="730" fill="none" stroke="#E63946" stroke-width="2" stroke-dasharray="10 6" />
+
+  <!-- Wireframe Composition Blocking -->
+  <rect x="130" y="135" width="460" height="310" fill="#DBEAFE" fill-opacity="0.55" stroke="#1D3557" stroke-width="2.5" />
+  <line x1="130" y1="135" x2="590" y2="445" stroke="#1D3557" stroke-width="1.5" />
+  <line x1="590" y1="135" x2="130" y2="445" stroke="#1D3557" stroke-width="1.5" />
+
+  <circle cx="845" cy="360" r="180" fill="none" stroke="#1D3557" stroke-width="3" />
+  <circle cx="845" cy="360" r="115" fill="none" stroke="#E63946" stroke-width="2" stroke-dasharray="8 6" />
+  <line x1="635" y1="360" x2="1055" y2="360" stroke="#1D3557" stroke-width="1.5" />
+  <line x1="845" y1="150" x2="845" y2="570" stroke="#1D3557" stroke-width="1.5" />
+
+  <!-- Headline Safe Zone Block -->
+  <rect x="130" y="485" width="460" height="195" fill="#FFFFFF" stroke="#1D3557" stroke-width="2.5" />
+  <line x1="155" y1="535" x2="520" y2="535" stroke="#1D3557" stroke-width="14" />
+  <line x1="155" y1="575" x2="465" y2="575" stroke="#1D3557" stroke-width="14" />
+  <line x1="155" y1="620" x2="360" y2="620" stroke="#94A3B8" stroke-width="8" />
+
+  <!-- Barcode / Folio Safe Zone Bottom Left -->
+  <rect x="130" y="710" width="210" height="72" fill="#FEF3C7" stroke="#D97706" stroke-width="2" stroke-dasharray="5 3" />
+  <text x="148" y="752" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#92400E">BARCODE SAFE ZONE</text>
+
+  <!-- Masthead Alignment Spec -->
+  <rect x="640" y="595" width="430" height="185" fill="#EFF6FF" stroke="#1D3557" stroke-width="2" />
+  <text x="664" y="642" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" fill="#1D3557">STAGE 01 · THUMBNAIL WIREFRAME</text>
+  <text x="664" y="682" font-family="Courier New, monospace" font-size="16" fill="#334155">12-COL MODULAR GRID · SCALE 100%</text>
+  <text x="664" y="714" font-family="Courier New, monospace" font-size="16" fill="#334155">BLEED: 5MM ALL EDGES · DPI: 300</text>
+  <text x="664" y="746" font-family="Courier New, monospace" font-size="16" fill="#E63946">CLICK IMAGE TO DROP FEEDBACK PINS</text>
+
+  <!-- Corner Crop Marks -->
+  <text x="72" y="44" font-family="Courier New, monospace" font-size="15" font-weight="700" fill="#1D3557">PLATE V1 · ROUGH SKETCH &amp; GRID WIREFRAME</text>
+</svg>

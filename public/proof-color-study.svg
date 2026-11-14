@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <rect width="1200" height="900" fill="#FFFFFF" />
+  <rect x="40" y="40" width="1120" height="820" fill="#FAF8F5" stroke="#111111" stroke-width="4" />
+
+  <!-- Top Header Strip -->
+  <rect x="40" y="40" width="1120" height="84" fill="#111111" />
+  <text x="72" y="92" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="4" fill="#FFFFFF">STAGE 02 · PANTONE SPOT COLOR STUDY</text>
+  <text x="875" y="92" font-family="Courier New, monospace" font-size="18" font-weight="700" fill="#F4A261">PLATE V2 · INK PROOF</text>
+
+  <!-- Artwork Composition in Spot Color Plates -->
+  <rect x="85" y="160" width="490" height="470" fill="#E63946" stroke="#111111" stroke-width="4" />
+  <rect x="135" y="210" width="210" height="370" fill="#1D3557" stroke="#111111" stroke-width="4" />
+  <circle cx="430" cy="395" r="125" fill="#F4A261" stroke="#111111" stroke-width="4" />
+  <rect x="345" y="340" width="180" height="22" fill="#111111" />
+
+  <!-- Halftone Overprint Block -->
+  <rect x="615" y="160" width="500" height="305" fill="#1D3557" stroke="#111111" stroke-width="4" />
+  <polygon points="615,465 920,160 1115,465" fill="#F4A261" stroke="#111111" stroke-width="4" />
+  <circle cx="980" cy="255" r="55" fill="#E63946" stroke="#111111" stroke-width="4" />
+
+  <!-- Right Spec Swatches -->
+  <rect x="615" y="495" width="156" height="135" fill="#E63946" stroke="#111111" stroke-width="3" />
+  <text x="630" y="608" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#FFFFFF">PMS 485C</text>
+
+  <rect x="787" y="495" width="156" height="135" fill="#1D3557" stroke="#111111" stroke-width="3" />
+  <text x="802" y="608" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#FFFFFF">PMS 534C</text>
+
+  <rect x="959" y="495" width="156" height="135" fill="#F4A261" stroke="#111111" stroke-width="3" />
+  <text x="972" y="608" font-family="Courier New, monospace" font-size="16" font-weight="700" fill="#111111">PMS 1375C</text>
+
+  <!-- Density Wedge Bar Bottom -->
+  <rect x="85" y="665" width="1030" height="150" fill="#FFFFFF" stroke="#111111" stroke-width="3" />
+  <text x="115" y="712" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="900" fill="#111111">UNCOATED PAPER ABSORPTION &amp; CONTRAST CHECK</text>
+  <rect x="115" y="736" width="160" height="44" fill="#E63946" />
+  <rect x="275" y="736" width="160" height="44" fill="#E63946" fill-opacity="0.7" />
+  <rect x="435" y="736" width="160" height="44" fill="#1D3557" />
+  <rect x="595" y="736" width="160" height="44" fill="#1D3557" fill-opacity="0.7" />
+  <rect x="755" y="736" width="160" height="44" fill="#F4A261" />
+  <rect x="915" y="736" width="160" height="44" fill="#111111" />
+</svg>
