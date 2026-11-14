@@ -370,13 +370,16 @@ const CommissionModal = forwardRef<CommissionModalHandle>((_, ref) => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-5xl p-0 overflow-hidden border-none rounded-none bg-transparent">
+      <DialogContent
+        showCloseButton={false}
+        className="w-[min(95vw,64rem)] max-w-5xl sm:max-w-5xl p-0 overflow-hidden border-2 border-black rounded-none bg-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+      >
         <DialogTitle className="sr-only">
           {editingDraftId ? "Edit Draft Commission" : "New Commission"}
         </DialogTitle>
-        <div className="grid grid-cols-1 lg:grid-cols-12 bg-black gap-px">
+        <div className="grid grid-cols-1 lg:grid-cols-12 bg-black gap-px max-h-[88vh] overflow-y-auto lg:overflow-hidden">
           {/* Left side — video / motion panel */}
-          <div className="lg:col-span-4 relative bg-black min-h-[240px] lg:min-h-[600px] overflow-hidden">
+          <div className="lg:col-span-4 relative bg-black min-h-[220px] lg:min-h-[580px] overflow-hidden">
             <video
               src="/studio-video.mp4"
               autoPlay
@@ -397,8 +400,9 @@ const CommissionModal = forwardRef<CommissionModalHandle>((_, ref) => {
               </p>
             </div>
             <button
+              type="button"
               onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white/10 hover:bg-white/20 transition-colors text-white"
+              className="lg:hidden absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-black/70 hover:bg-black transition-colors text-white"
               aria-label="Close modal"
             >
               <X className="w-4 h-4" />
@@ -406,9 +410,9 @@ const CommissionModal = forwardRef<CommissionModalHandle>((_, ref) => {
           </div>
 
           {/* Right side — form */}
-          <div className="lg:col-span-8 bg-white">
+          <div className="lg:col-span-8 bg-white text-black flex flex-col lg:max-h-[88vh]">
             {/* Header */}
-            <div className="px-6 py-5 border-b border-black/10 flex items-center justify-between">
+            <div className="px-6 py-5 border-b border-black/10 flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
                   Step {step} of 3
@@ -429,9 +433,10 @@ const CommissionModal = forwardRef<CommissionModalHandle>((_, ref) => {
                   </span>
                 )}
               </div>
-              <div className="flex gap-2">
+              <div className="flex items-center gap-2">
                 {isAuthenticated && (
                   <Button
+                    type="button"
                     variant="ghost"
                     size="sm"
                     className="text-xs uppercase tracking-widest rounded-none"
@@ -446,11 +451,19 @@ const CommissionModal = forwardRef<CommissionModalHandle>((_, ref) => {
                     {editingDraftId ? "Update Draft" : "Save Draft"}
                   </Button>
                 )}
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  className="hidden lg:flex w-8 h-8 border border-black/15 items-center justify-center hover:bg-black hover:text-white transition-colors shrink-0"
+                  aria-label="Close modal"
+                >
+                  <X className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
             {/* Form body */}
-            <div className="px-6 py-6 max-h-[500px] overflow-y-auto">
+            <div className="px-6 py-6 flex-1 min-h-0 overflow-y-auto">
               {step === 1 && (
                 <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                   <div>
@@ -798,7 +811,7 @@ const CommissionModal = forwardRef<CommissionModalHandle>((_, ref) => {
             </div>
 
             {/* Footer buttons */}
-            <div className="px-6 py-4 border-t border-black/10 flex justify-between items-center">
+            <div className="px-6 py-4 border-t border-black/10 flex justify-between items-center shrink-0">
               <div>
                 {step > 1 && (
                   <Button

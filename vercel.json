@@ -6,10 +6,10 @@
       "use": "@vercel/static-build",
       "config": { "distDir": "dist/public" }
     },
-    { "src": "api/[[...all]].ts", "use": "@vercel/node" }
+    { "src": "api/handler.mjs", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/.*", "dest": "/api/[[...all]].ts" },
+    { "src": "/api/.*", "dest": "/api/handler.mjs" },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]

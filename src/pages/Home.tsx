@@ -1470,15 +1470,18 @@ export default function Home() {
           if (!isOpen) setActiveCaseStudy(null);
         }}
       >
-        <DialogContent className="max-w-5xl p-0 overflow-hidden border-none rounded-none bg-transparent">
+        <DialogContent
+          showCloseButton={false}
+          className="w-[min(95vw,64rem)] max-w-5xl sm:max-w-5xl p-0 overflow-hidden border-2 border-black rounded-none bg-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"
+        >
           <DialogTitle className="sr-only">
             {activeCaseStudy?.title ?? "Portfolio Case Study"}
           </DialogTitle>
           {activeCaseStudy && (
-            <div className="grid grid-cols-1 md:grid-cols-12 bg-black gap-px">
+            <div className="grid grid-cols-1 md:grid-cols-12 bg-black gap-px max-h-[88vh] overflow-y-auto md:overflow-hidden">
               {/* Left: 3-Stage Visual Inspector */}
-              <div className="md:col-span-5 bg-neutral-900 flex flex-col justify-between relative min-h-[340px]">
-                <div className="relative flex-1 overflow-hidden bg-neutral-100">
+              <div className="md:col-span-5 bg-neutral-900 flex flex-col justify-between relative min-h-[320px] md:min-h-[540px] md:max-h-[88vh]">
+                <div className="relative flex-1 min-h-[260px] overflow-hidden bg-neutral-100">
                   <img
                     src={activeCaseStudy.img}
                     alt={`${activeCaseStudy.title} (${inspectorStage})`}
@@ -1572,10 +1575,10 @@ export default function Home() {
               </div>
 
               {/* Right: Metadata, Palette, Notes */}
-              <div className="md:col-span-7 bg-white p-6 lg:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+              <div className="md:col-span-7 bg-white text-black p-6 sm:p-8 flex flex-col justify-between overflow-y-auto overflow-x-hidden md:max-h-[88vh]">
                 <div>
                   <div className="flex items-start justify-between gap-4 mb-4">
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#e63946] mb-1">
                         {activeCaseStudy.category} · {activeCaseStudy.client}
                       </p>
@@ -1598,27 +1601,27 @@ export default function Home() {
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-black/10 border border-black/10 mb-6">
-                    <div className="bg-neutral-50 p-3">
-                      <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-1">
+                    <div className="bg-neutral-50 p-3.5 min-w-0">
+                      <p className="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1">
                         Turnaround
                       </p>
-                      <p className="text-xs font-semibold">
+                      <p className="text-xs font-semibold break-words">
                         {activeCaseStudy.turnaround}
                       </p>
                     </div>
-                    <div className="bg-neutral-50 p-3">
-                      <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-1">
+                    <div className="bg-neutral-50 p-3.5 min-w-0">
+                      <p className="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1">
                         Format
                       </p>
-                      <p className="text-xs font-semibold">
+                      <p className="text-xs font-semibold break-words">
                         {activeCaseStudy.formatDimensions}
                       </p>
                     </div>
-                    <div className="bg-neutral-50 p-3">
-                      <p className="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-1">
+                    <div className="bg-neutral-50 p-3.5 min-w-0">
+                      <p className="text-[9px] font-bold uppercase tracking-wider text-gray-400 mb-1">
                         Rights Scope
                       </p>
-                      <p className="text-xs font-semibold">
+                      <p className="text-xs font-semibold break-words">
                         {activeCaseStudy.rightsScope}
                       </p>
                     </div>
@@ -1628,22 +1631,22 @@ export default function Home() {
                     <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">
                       Color Palette (Click to Copy HEX)
                     </p>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                       {activeCaseStudy.palette.map((hex) => (
                         <button
                           key={hex}
                           type="button"
                           onClick={() => handleCopyHex(hex)}
-                          className="border border-black/15 p-1.5 text-left hover:border-black transition-colors"
+                          className="border border-black/15 p-1.5 text-left hover:border-black transition-colors min-w-0"
                         >
                           <div
                             className="h-6 w-full mb-1 border border-black/10"
                             style={{ backgroundColor: hex }}
                           />
-                          <span className="text-[10px] font-mono font-bold flex items-center justify-between">
-                            {hex}
+                          <span className="text-[10px] font-mono font-bold flex items-center justify-between gap-1 min-w-0">
+                            <span className="truncate">{hex}</span>
                             {copiedHex === hex && (
-                              <Check className="w-2.5 h-2.5 text-emerald-600" />
+                              <Check className="w-2.5 h-2.5 text-emerald-600 shrink-0" />
                             )}
                           </span>
                         </button>

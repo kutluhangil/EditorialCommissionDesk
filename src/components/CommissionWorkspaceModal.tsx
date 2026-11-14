@@ -307,7 +307,7 @@ function WorkspaceInner({
   };
 
   return (
-    <div className="bg-white border-2 border-black flex flex-col max-h-[90vh]">
+    <div className="bg-white text-black border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] flex flex-col max-h-[90vh]">
       {/* Top Mondrian Workspace Bar */}
       <div className="bg-black text-white px-6 py-4 flex items-center justify-between gap-4 shrink-0">
         <div className="flex flex-wrap items-center gap-3 min-w-0">
@@ -1194,7 +1194,10 @@ export function CommissionWorkspaceModal({
         if (!open) onClose();
       }}
     >
-      <DialogContent className="max-w-6xl p-0 overflow-hidden border-none rounded-none bg-transparent">
+      <DialogContent
+        showCloseButton={false}
+        className="w-[min(96vw,72rem)] max-w-6xl sm:max-w-6xl p-0 overflow-hidden border-none rounded-none bg-transparent"
+      >
         <DialogTitle className="sr-only">
           Commission Workspace #{commissionId ?? ""}
         </DialogTitle>
